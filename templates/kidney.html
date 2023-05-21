@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>kidney</title>
+    </head>
+    <body>
+        <table>
+            <form  action="{{url_for('kidneypredict')}}" method="post">
+                <tr>
+                    <td><input type="text" placeholder="age" id="age" name="age"></td>
+                    <td><input type="text" placeholder="bp" id="bp" name="bp"></td>
+                    <td><input type="text" placeholder="specific gravity" id="sg" name="sg"></td>
+                    <td><input type="text" placeholder="albumin" id="al" name="al"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="red blood cell(normal:0,abnormal:1)" id="rbc" name="rbc"></td>
+                    <td><input type="text" placeholder="pus cell(normal:0,abnormal:1)" id="pc" name="pc"></td>
+                    <td><input type="text" placeholder="pus cell clumps(present:1,not present:0)" id="pcc" name="pcc"></td>
+                    <td><input type="text" placeholder="bacteria(present:1,not present:0)" id="ba" name="ba"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="blood glucose random" id="bgr" name="bgr"></td>
+                    <td><input type="text" placeholder="blood urea" id="bu" name="bu"></td>
+                    <td><input type="text" placeholder="serum creatinine" id="sc" name="sc"></td>
+                    <td><input type="text" placeholder="sodium" id="sod" name="sod"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="potassium" id="pot" name="pot"></td>
+                    <td><input type="text" placeholder="hemoglobin" id="hemo" name="hemo"></td>
+                    <td><input type="text" placeholder="packed cell volume" id="pcv" name="pcv"></td>
+                    <td><input type="text" placeholder="white blood cell count" id="wc" name="wc"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="red blood cell count" id="rc" name="rc"></td>
+                    <td><input type="text" placeholder="hypertension(no:0,yes:1)" id="htn" name="htn"></td>
+                    <td><input type="text" placeholder="diabetes mellitus(yes:1,no:0)" id="dm" name="dm"></td>
+                    <td><input type="text" placeholder="coronary artery disease(yes:1,no:0)" id="cad" name="cad"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="appetite(good:0,poor:1)" id="appet" name="appet"></td>
+                    <td><input type="text" placeholder="pus cell(normal:0,abnormal:1)" id="pc" name="pc"></td>
+                    <td><input type="text" placeholder="pedal edema(yes:1,no:0)" id="pcc" name="pcc"></td>
+                    <td><input type="text" placeholder="anemia(yes:1,no:0)" id="ba" name="ba"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    
+                        <td></td>
+                        <td><button type="submit">Predict</button></td>
+                </tr>
+            </form>
+            {{prediction_text}}
+            </table>
+        </body></html>

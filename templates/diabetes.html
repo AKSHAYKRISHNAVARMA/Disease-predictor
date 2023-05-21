@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>diabetes predictor</title>
+</head>
+<body>
+    <table>
+    <form action="{{url_for('diabetespredict')}}" method="post">
+        <tr>
+            <td>Pregnancies : </td>
+            <td> <input type="text" name="Pregnancies"></td>
+        </tr>
+        <tr>
+            <td> Glucose : </td>
+            <td> <input type="text" name="Glucose"></td>
+        </tr>
+        <tr>
+            <td>BloodPressure : </td>
+            <td> <input type="text" name="BloodPressure"></td>
+        </tr>
+        <tr>
+            <td>SkinThickness : </td>
+            <td> <input type="text" name="SkinThickness"></td>
+        </tr>
+        <tr>
+            <td>Insulin : </td>
+            <td> <input type="text" name="Insulin"></td>
+        </tr>
+        <tr>
+            <td>BMI : </td>
+            <td> <input type="text" name="BMI"></td>
+        </tr>
+        <tr>
+            <td>DiabetesPedigreeFunction : </td>
+            <td> <input type="text" name="DiabetesPedigreeFunction"></td>
+        </tr>
+        <tr>
+            <td>Age : </td>
+            <td> <input type="text" name="Age"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Predict</button></td>
+        </tr>
+    </form>
+    {{prediction_text}}
+    </table>
+</body></html>

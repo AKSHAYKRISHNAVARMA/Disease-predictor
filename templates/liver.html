@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>"liver disease"</title>
+</head>
+<body>
+    <table style="border:1px solid;background: aqua;align-content: center;">
+        <form  action="{{url_for('liverpredict')}}" method="post">
+            <tr>
+                <td><input type="text" id="age" name="age" placeholder="age"></td>
+                <td><input type="text" id="Gender" name="Gender" placeholder="Gender(0:male,1:female)"></td>
+                <td><input type="text" id="Total_Bilirubin" name="Total_Bilirubin" placeholder="Total_Bilirubin"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="Direct_Bilirubin" name="Direct_Bilirubin" placeholder="Direct_Bilirubin"></td>
+                <td><input type="text" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase" placeholder="Alkaline_Phosphotase"></td>
+                <td><input type="text" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" placeholder="Alamine_Aminotransferase"></td>
+            </tr>
+             <tr>
+                <td><input type="text" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" placeholder="Aspartate_Aminotransferase"></td>
+                <td><input type="text" id="Total_Protiens" name="Total_Protiens" placeholder="Total_Protiens"></td>
+                <td><input type="text" id="Albumin" name="Albumin" placeholder="Albumin"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio" placeholder="Albumin_and_Globulin_Ratio"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">  predict </button></td>
+                <td></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

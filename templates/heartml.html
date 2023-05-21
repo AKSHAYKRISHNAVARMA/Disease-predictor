@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>"heart disease ml"</title>
+    </head>
+    <body>
+        <table  >
+        <form action="{{url_for('heartpredict')}}" method="post">
+            <th  style="text-align:middle">Please enter the following fields</th>
+            <tr>
+                <td>age : </td>
+           <td> <input type="text" name="age"></td>
+            </tr>
+            <tr>
+                <td> Gender(1 for male,0 for female) : </td>
+           <td> <input type="text" name="gender"></td>
+            </tr>
+            <tr>
+                <td>chest pain type :  </td>
+           <td> <select id="chest pain type" name="cp">
+            <option value="0">typical angina</option>
+            <option value="1">atypical angina</option>
+            <option value="2">non-anginal pain</option>
+            <option value="3">asymptomatic</option>
+          </select></td>
+            </tr>
+            <tr>
+                <td>resting blood pressure : </td>
+           <td> <input type="text" name="restbps"></td>
+            </tr>
+            <tr>
+                <td>serum cholestoral : </td>
+           <td> <input type="text" name="chol"></td>
+            </tr>
+            <tr>
+                <td>Fasting blood sugar : </td>
+           <td> <select id="fasting blood pressure" name="fbs">
+            <option value="1">> 120 mg/dl</option>
+            <option value="0">< 120 mg/dl</option></select></td>
+            </tr>
+            <tr>
+                <td>resting electrocardiographic results : </td>
+           <td> <select id="resecg" name="resecg">
+            <option value="0">Normal</option>
+            <option value="1">Having ST-T wave abnormality</option></td>
+            </select></tr>
+            <tr>
+                <td>Maximum heart rate : </td>
+           <td> <input type="text" name="thalach"></td>
+            </tr>
+            <tr>
+                <td>exercise induced angina :  </td>
+           <td><select id="exercise induced angina" name="exang"> 
+            <option value="1">yes</option>
+            <option value="0">No</option></select></td>
+            </tr>
+            <tr>
+                <td>ST depression induced by exercise relative to rest : </td>
+           <td> <input type="text" name="oldpeak"></td>
+            </tr>
+            <tr>
+                <td>slope of the peak exercise ST segment :  </td>
+           <td><select id="slope" name="slope">
+             <option value="0">upsloping</option>
+            <option value="1">flat</option>
+            <option value="2">downsloping</option></select></td>
+            </tr>
+            <tr>
+                <td>number of major vessels colored by flourosopy : </td>
+           <td><select id="ca" name="ca">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option></select></td>
+            </tr>
+            <tr>
+                
+                    <td>thal :  </td>
+               <td><select placeholder="select" id="thal" name="thal"> 
+                <option value="0">normal</option>
+                <option value="1">fixed defect</option>
+                <option value="2">reversable</option></select></td>
+                </tr><br>
+                <td></td>
+                <td><button type="submit">Predict</button></td>
+            </tr>
+        </form>
+        {{prediction_text}}
+        </table>
+    </body>
+</html>
